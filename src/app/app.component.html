@@ -1,0 +1,62 @@
+<div class="default-bckg"  [ngClass]="{'cloud': currentWeather === 'Cloud' || currentWeather === 'Clouds', 'rain': currentWeather === 'Rain' || currentWeather === 'Drizzle', 'clear': currentWeather === 'Clear'}">
+  <!--  [ngClass]="{'cloud': currentWeather === 'Cloud' || currentWeather === 'Clouds', 'rain': currentWeather === 'Rain' || currentWeather === 'Drizzle', 'clear': currentWeather === 'Clear'}" -->
+  <div class="row p20">
+    <h2 class="col-sm-12 header-data" style="color: white"> Welcome to Weatherify!!</h2>
+
+    <div class="dropdown col-sm-2">
+      <select class="dropbtn" (change)="changeCity($event.target)">
+        <ng-container class="dropdown-content">
+          <option value="" disabled>Select your city</option>
+          <option class="dropdown-content">London</option>
+          <option class="dropdown-content">Amsterdam</option>
+          <option class="dropdown-content">Paris</option>
+          <option class="dropdown-content">Berlin</option>
+          <option class="dropdown-content">Rome</option>
+        </ng-container>
+
+      </select>
+    </div>
+    <h4 *ngIf="!selectedCity" class="get-started">Select a City to get started...</h4>
+  </div>
+
+  <div class="row m3">
+    <h4 style='font-size:40px;' *ngIf="selectedCity" class="title select-city col-sm-12">{{selectedCity}}</h4>
+  </div>
+  <div class="forcast-info" *ngIf="selectedCity">
+    <p *ngIf="averageTemperature" class="display-temp">
+      <span style='font-size:100px;'>{{averageTemperature | number:'2.1-2'}} &#8451;</span>
+    </p>
+
+
+    <p *ngIf="windStrength" class="display-speed">
+      <span style='font-size:60px;'>{{windStrength}} Kmph</span>
+    </p>
+
+    <p *ngIf="averageTemperature" class="display-status">
+      <label style='font-size:40px;'>{{status}} </label>
+    </p>
+
+    <button class="btn btn-forecast" *ngIf="selectedCity" (click)="forecast()" data-toggle="modal" data-target="#forecastGraph" >Forecast</button>
+  </div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog" id="forecastGraph">
+  <div class="modal-dialog top20" style="width:1250px;" >
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Today's Forecast</h4>
+      </div>
+      <div class="modal-body">
+        <app-forecast [temperatureData]="temperatureData" [timeData]="timeArray"></app-forecast>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+

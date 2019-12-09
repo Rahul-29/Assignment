@@ -1,0 +1,349 @@
+
+.default-bckg {
+  background-image: url("/assets/weather.jpg");
+  background-repeat: repeat-x top left;
+  height: 100vh;
+}
+
+.cloud {
+  background-image: url("/assets/cloudy.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+ }
+
+.clear {
+  background-image: url("/assets/clear-1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.rain {
+  background-image: url("/assets/rain-leaf.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+h2 {
+   text-align: center;
+}
+
+li {
+    border: none;
+     border-radius: 0px;
+      margin-right: 0px;
+       margin-left: 0px;
+        color: rgb(247, 231, 231);
+         background-color: transparent;
+          font-family: Arimo;
+           font-weight: lighter;
+}
+
+.icon_chevron_up:before {
+  content: "\f394";
+}
+$icon_chevron_up: "\f394";
+
+.icon_chevron_down:before {
+  content: "\f38e";
+}
+$icon_chevron_down: "\f38e";
+
+.float-right {
+  float: right;
+}
+
+.user-utilities {
+  position: relative;
+  .btn-dropdown-toggle {
+    margin-top: 12px;
+    margin-right: 10px;
+    border: 0px solid rgba(54, 71, 86, .2);
+    width: 200px;
+    > span {
+      padding-left: 10px;
+      color: #ffffff;
+      float:left;
+    }
+    &:hover {
+      background-color: mix(#2f4250, white, 50%);
+    }
+    &:active {
+      background-color: #2f4250;
+    }
+    &.focus {
+      background-color: #2f4250;
+      border: 2px solid #00d9ff;
+    }
+  }
+  &.show {
+    .btn.dropdown-toggle {
+      border: none;
+      padding-right: 10px;
+      &.hover {
+        background-color: #2f4250;
+      }
+    }
+  }
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: transparent;
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus, .dropbtn:active {
+  // background-color: #2980B9;
+  border: 1px solid black;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: absolute;
+  right: 30px;
+  top:20px;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+
+  // display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content option {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content option:hover {
+  // background-color: #ddd;
+  border: 1px solid black;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display:block;
+}
+
+.hide {
+  display: none;
+}
+
+// .display-temp {
+//   position: absolute;
+//   left: 120px;
+//   top: 200px;
+// }
+
+// .display-speed {
+//   position: absolute;
+//   left: 120px;
+//   top: 240px;
+// }
+
+// .display-status {
+//   position: absolute;
+//   left: 120px;
+//   top: 280px;
+// }
+
+// .title {
+//   font-size: 30px;
+//   // font-family:
+//   position: absolute;
+//   top: 90px;
+//   left: 120px;
+// }
+
+.float-left {
+  float: left;
+}
+
+.get-started {
+  font-style: italic;
+  font-size: 40px;
+  font-family: 'Apple Chancery', 'cursive';
+  position: absolute;
+  top: 200px;
+  left: 430px;
+}
+
+.bckg-blue {
+  background: lightblue;
+}
+
+.btn-forecast  {
+  // position: absolute;
+  // left: 120px;
+  // top: 320px;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  &:hover {
+    border: 2px solid black;
+  }
+  &:active {
+    background-color: grey;
+  }
+}
+
+.forcast-info{
+    border: 1px solid;
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.select-city{
+  text-align: center;
+}
+
+.header-info{
+  padding: 5px;
+}
+
+.modal-title{
+  text-align: center;
+}
+
+// for clouds effect
+
+
+body {
+	/*To hide the horizontal scroller appearing during the animation*/
+	overflow: hidden;
+}
+
+#clouds{
+	padding: 100px 0;
+	background: #c9dbe9;
+	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+}
+
+/*Time to finalise the cloud shape*/
+// .cloud {
+// 	width: 200px; height: 60px;
+// 	background: #fff;
+
+// 	border-radius: 200px;
+// 	-moz-border-radius: 200px;
+// 	-webkit-border-radius: 200px;
+
+// 	position: relative;
+// }
+
+// .cloud:before, .cloud:after {
+// 	content: '';
+// 	position: absolute;
+// 	background: #fff;
+// 	width: 100px; height: 80px;
+// 	position: absolute; top: -15px; left: 10px;
+
+// 	border-radius: 100px;
+// 	-moz-border-radius: 100px;
+// 	-webkit-border-radius: 100px;
+
+// 	-webkit-transform: rotate(30deg);
+// 	transform: rotate(30deg);
+// 	-moz-transform: rotate(30deg);
+// }
+
+// .cloud:after {
+// 	width: 120px; height: 120px;
+// 	top: -55px; left: auto; right: 15px;
+// }
+
+// /*Time to animate*/
+// .x1 {
+// 	-webkit-animation: moveclouds 15s linear infinite;
+// 	-moz-animation: moveclouds 15s linear infinite;
+// 	-o-animation: moveclouds 15s linear infinite;
+// }
+
+// /*variable speed, opacity, and position of clouds for realistic effect*/
+// .x2 {
+// 	left: 200px;
+
+// 	-webkit-transform: scale(0.6);
+// 	-moz-transform: scale(0.6);
+// 	transform: scale(0.6);
+// 	opacity: 0.6; /*opacity proportional to the size*/
+
+// 	/*Speed will also be proportional to the size and opacity*/
+// 	/*More the speed. Less the time in 's' = seconds*/
+// 	-webkit-animation: moveclouds 25s linear infinite;
+// 	-moz-animation: moveclouds 25s linear infinite;
+// 	-o-animation: moveclouds 25s linear infinite;
+// }
+
+// .x3 {
+// 	left: -250px; top: -200px;
+
+// 	-webkit-transform: scale(0.8);
+// 	-moz-transform: scale(0.8);
+// 	transform: scale(0.8);
+// 	opacity: 0.8; /*opacity proportional to the size*/
+
+// 	-webkit-animation: moveclouds 20s linear infinite;
+// 	-moz-animation: moveclouds 20s linear infinite;
+// 	-o-animation: moveclouds 20s linear infinite;
+// }
+
+// .x4 {
+// 	left: 470px; top: -250px;
+
+// 	-webkit-transform: scale(0.75);
+// 	-moz-transform: scale(0.75);
+// 	transform: scale(0.75);
+// 	opacity: 0.75; /*opacity proportional to the size*/
+
+// 	-webkit-animation: moveclouds 18s linear infinite;
+// 	-moz-animation: moveclouds 18s linear infinite;
+// 	-o-animation: moveclouds 18s linear infinite;
+// }
+
+// .x5 {
+// 	left: -150px; top: -150px;
+
+// 	-webkit-transform: scale(0.8);
+// 	-moz-transform: scale(0.8);
+// 	transform: scale(0.8);
+// 	opacity: 0.8; /*opacity proportional to the size*/
+
+// 	-webkit-animation: moveclouds 20s linear infinite;
+// 	-moz-animation: moveclouds 20s linear infinite;
+// 	-o-animation: moveclouds 20s linear infinite;
+// }
+
+// @-webkit-keyframes moveclouds {
+// 	0% {margin-left: 1000px;}
+// 	100% {margin-left: -1000px;}
+// }
+// @-moz-keyframes moveclouds {
+// 	0% {margin-left: 1000px;}
+// 	100% {margin-left: -1000px;}
+// }
+// @-o-keyframes moveclouds {
+// 	0% {margin-left: 1000px;}
+// 	100% {margin-left: -1000px;}
+// }
+
